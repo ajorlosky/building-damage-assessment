@@ -1,0 +1,43 @@
+## Building Damage Classification
+
+1.	SVM Classification
+https://colab.research.google.com/drive/1Xv0T5Q3IolgD50Do03KvmscLDTOxDXDO?usp=drive_link
+
+The goal of this file is to try and use a Support Vector Machine to classify our images. To properly run this code run all of the cells before the “Gather Image” cells. Then pick one of the “Gather Images” cells to run based on the test you would like to try. Then run one of the create train and test split cells. Finally run the part 1 and 2 code to train the SVM and run the test set over the SVM model. 
+ 
+2.	Siamese Network
+https://colab.research.google.com/drive/1-LfSyWRwwR74Iw2eDfb-moA8RomLzftj?usp=drive_link
+
+The goal of this file is to try running a siamese model over our dataset to achieve higher accuracy. This file can be run with the google colab “run all functions”. The Siamese Model file will gather images based on a disaster name, and train the siamese model on these building images. Our Siamese Model outputs a binary classification if the building had no damage or some level of damage. 
+
+3.	Preprocessing 
+https://colab.research.google.com/drive/1gacB6GPYRWoaggmZRLPQQw99yDcClkMY?usp=drive_link
+
+This file is where we learned how to properly interact with the dataset and then performed preprocessing actions onto the dataset. These cells should be run in order to see our process of interacting with the dataset. However, the “Image Directory” cell will take around 10 hours to run, since we already cleaned our dataset. Feel free to skip this cell. Later in the file the cells produce visualizations of our dataset in the form of histograms
+
+4.	KNN 
+https://colab.research.google.com/drive/1xo27PUgMxtvt11PTs7V-OVwtv-UUtTSg?usp=drive_link
+
+The purpose of this file is to try the classical method of K-Nearest-Neighbors classification on our dataset. To run properly, first run all of the Part 0 Code. Then Run the first two cells in Part 1 to gather the images as necessary. Then choose either the 3rd or 4th cell to run, one will create the testing split with all categories even, the other will not consider the damage levels in testing set creation. Then run Part 2 to run the KNN model.
+ 
+5.	CNN Edge Detection 
+https://colab.research.google.com/drive/1ldETNEfj6jPWpCt7wk0poVrHQwdoTBQw?usp=drive_link
+
+This file’s goal is to utilize a CNN as well as edge detection to try and classify our data. The goal is for the CNN to be able to take in an image of the edges of a building and determine the damage level of said building. To run, this file can be run using the google colab “Run All” functionality. The code will grab the images of the specified disaster, then split the data based on an even distribution of the damage classifications. Once the train and the test split happen the CNN will train on the edge detected images. 
+ 
+6.	Crop_Buildings
+https://colab.research.google.com/drive/1d6oOyVwrvMLlTqEEASa8ZFbPT9lotU0d?usp=drive_link
+
+This file is where we learned how to process the different buildings in the images. Our models want to take in the individual buildings to classify their damage level, and thus we needed a way to crop out the buildings before passing them into our models as data. This file can be run using the google colab “Run All” functionality. It shows our initial exploration and how our cropping functions work
+ 
+
+7.	Building Classification CNN
+https://colab.research.google.com/drive/1goyj3vN_VYUGtJsJccUAATfvGSar9tVb?usp=drive_link
+
+This file runs our data on a CNN model. The goal here was to use the post-disaster image of the build to determine how damaged it got. This was our initial approach in our modeling. To run, run the non-numbered cells in part 0, then pick either of the two gathering cells based on the test you would like to run. Then pick the train/test split that you would like to do. Then run Part1, Part2 and Part 3 to see how the data performed in the CNN.  Part 5 is the basis for the demo that we showed in class. 
+
+8.	Demo
+
+https://colab.research.google.com/drive/1MhsgUo9HMc6Ts0ji_zjtLybBsQlDg3oK?usp=sharing
+
+This file runs an interactive demo to allow a user to select a specific disaster type and model for training and testing on building damage assessment. This demo represents a potential product for a user of our application to be able to classify damage of all buildings in a satellite image using any one of our methods CNN, Edge Detection CNN, Siamese Neural Network, SVM, or KNN. We have the best performance with KNN, but all of them are promising for different use cases.
