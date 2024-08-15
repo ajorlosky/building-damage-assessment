@@ -1,5 +1,40 @@
 # Building Damage Classification
 
+     Various natural disasters frequently occur every year. These disasters often tear through
+civilization whether that be busy cities or rural towns. In order to provide the most effective aid
+post-disaster, a damage assessment is mandatory. Understanding the magnitude of the damage is
+an important step to see how much aid is needed and which areas need the most attention.
+Traditionally, in order to get these assessments, people are sent onsite, manually going around
+and checking each building. This method is rather crude as it puts people at risk of lingering
+damages (i.e. damaged power lines) in order to gather information. Furthermore, the act of
+checking each building one by one is very time consuming and delays the time for the
+subsequent aid. Ultimately, being able to scan an area and quickly classify the extent of damage
+in specific areas can enable communities to better respond to natural disasters in a timely
+manner. Our design takes in satellite images along with the segmented building locations and
+classifies the damage level that those buildings sustained during the disaster. The goal of our
+model would be for disaster relief organizations to have the ability to use our model, and
+hopefully provide valuable insight into where the damage is concentrated.
+A potential workflow may include relief workers feeding the data from an overhead
+camera into a localization model in order to locate all the buildings in each image. Then, the
+images with located buildings could be used as an input in our model in order to assess the
+damage level of the buildings.
+
+     Our code utilizes machine learning techniques in order to perform damage level
+classification on those buildings, placing buildings into categories based on the level of damage
+they accrued. We assess the precision of each model using accuracy and F1 scores. In the
+xView2 AI Challenge [1], an open challenge to see who’s model could identify buildings and
+rate the amount of damage the best, IBM announced that the best submission achieved an F1
+score of 66% for damage classification. We attempted to get similar results as we built our
+models and performed various experiments throughout the semester.
+The final product of our project would be a software model which can classify the
+damage levels of a building. For our development we used Google Colab as our programming
+environment as it allows for access to GPU resources for training the model. If our model was to
+transition into a fully deployed application, then it would be beneficial to have dedicated
+hardware, specifically GPUs so that the training of the model can be done quickly and efficiently.
+
+### Google Colab Project Code
+This project is broken down into a variety of Google Colab scripts meant to perform building damage assessment of satellite images from the XView2 Dataset (see Report references). For more information on each component, see the linked titles or the individual scripts in the Code folder. 
+
 ## 1. [SVM Classification](https://colab.research.google.com/drive/1Xv0T5Q3IolgD50Do03KvmscLDTOxDXDO?usp=drive_link)
 
 The goal of this file is to use a Support Vector Machine (SVM) to classify images. To properly run this code:
