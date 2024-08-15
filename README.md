@@ -1,6 +1,6 @@
 # Building Damage Classification
 
-     Various natural disasters frequently occur every year. These disasters often tear through
+Various natural disasters frequently occur every year. These disasters often tear through
 civilization whether that be busy cities or rural towns. In order to provide the most effective aid
 post-disaster, a damage assessment is mandatory. Understanding the magnitude of the damage is
 an important step to see how much aid is needed and which areas need the most attention.
@@ -19,7 +19,7 @@ camera into a localization model in order to locate all the buildings in each im
 images with located buildings could be used as an input in our model in order to assess the
 damage level of the buildings.
 
-     Our code utilizes machine learning techniques in order to perform damage level
+Our code utilizes machine learning techniques in order to perform damage level
 classification on those buildings, placing buildings into categories based on the level of damage
 they accrued. We assess the precision of each model using accuracy and F1 scores. In the
 xView2 AI Challenge [1], an open challenge to see who’s model could identify buildings and
