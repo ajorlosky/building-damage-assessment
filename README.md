@@ -1,6 +1,6 @@
 # Building Damage Classification
 
-Various natural disasters frequently occur every year. These disasters often tear through
+  Various natural disasters frequently occur every year. These disasters often tear through
 civilization whether that be busy cities or rural towns. In order to provide the most effective aid
 post-disaster, a damage assessment is mandatory. Understanding the magnitude of the damage is
 an important step to see how much aid is needed and which areas need the most attention.
@@ -14,19 +14,21 @@ manner. Our design takes in satellite images along with the segmented building l
 classifies the damage level that those buildings sustained during the disaster. The goal of our
 model would be for disaster relief organizations to have the ability to use our model, and
 hopefully provide valuable insight into where the damage is concentrated.
-A potential workflow may include relief workers feeding the data from an overhead
+
+  A potential workflow may include relief workers feeding the data from an overhead
 camera into a localization model in order to locate all the buildings in each image. Then, the
 images with located buildings could be used as an input in our model in order to assess the
 damage level of the buildings.
 
-Our code utilizes machine learning techniques in order to perform damage level
+  Our code utilizes machine learning techniques in order to perform damage level
 classification on those buildings, placing buildings into categories based on the level of damage
 they accrued. We assess the precision of each model using accuracy and F1 scores. In the
 xView2 AI Challenge [1], an open challenge to see who’s model could identify buildings and
 rate the amount of damage the best, IBM announced that the best submission achieved an F1
 score of 66% for damage classification. We attempted to get similar results as we built our
 models and performed various experiments throughout the semester.
-The final product of our project would be a software model which can classify the
+
+  The final product of our project would be a software model which can classify the
 damage levels of a building. For our development we used Google Colab as our programming
 environment as it allows for access to GPU resources for training the model. If our model was to
 transition into a fully deployed application, then it would be beneficial to have dedicated
